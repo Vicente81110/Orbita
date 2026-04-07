@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Órbita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="canvas-container">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div id="sidebar">
+        <h3>Controles Principales</h3>
+        
+        <label>Tema de Fondo:</label>
+        <select id="themeSelector">
+            <option value="dark">Espacio (Oscuro)</option>
+            <option value="light">Plano (Blanco)</option>
+        </select>
+
+        <label>Plantillas:</label>
+        <button id="btnSolarSystem" class="action-btn">Cargar Sistema Solar</button>
+        <button id="btnClear" class="action-btn" style="background-color: #a71d2a;">Limpiar Todo</button>
+
+        <h3>Herramientas</h3>
+        <button class="tool-btn active" data-type="star">Estrella</button>
+        <button class="tool-btn" data-type="planet">Planeta</button>
+        <button class="tool-btn" data-type="asteroid">Asteroide</button>
+        <button class="tool-btn eraser" data-type="eraser">Goma de Borrar</button>
+        <button class="tool-btn" data-type="rocket">Cohete</button>
+<button class="tool-btn" data-type="select" style="border-color: #28a745;">Controlar/Pilotar</button>
+
+        <h3>Propiedades</h3>
+        <label for="sizeSlider">Tamaño (Afecta la Masa): <span id="sizeVal">15</span></label>
+        <input type="range" id="sizeSlider" min="2" max="60" value="15">
+        
+        <p class="instructions">
+            - <strong>Estrella:</strong> Click para colocar.<br>
+            - <strong>Planeta/Asteroide:</strong> Arrastrar para dar impulso.<br>
+            - <strong>Goma:</strong> Click para eliminar.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
